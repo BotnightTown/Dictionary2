@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dictionaty</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="pngtree-book-icon-vector-image-png-image_6552370.png">
+</head>
+<body>
+<main>
+  <section>
+    <div id="difficulty-level">
+      <input type="radio" name="difficulty" id="easy">
+      <label for="easy">Легкий рівень</label><br>
+      <input type="radio" name="difficulty" id="medium">
+      <label for="medium">Середній рівень</label><br>
+      <input type="radio" name="difficulty" id="hard">
+      <label for="hard">Складний рівень</label><br>
+    </div>
+    <div id="main-dictionary">
+      <div id="card"></div>
+      <div class="number">
+        <span id="currentCount">0</span>/<span id="totalCount"></span>
+      </div>
+      <input type="text" name="word" id="word" placeholder="Введіть слово">
+      <button type="button" id="next">Далі</button>
+      <p id="stat">Статистика</p>
+      <div class="results">
+        <div class="answ" id="rightAnsw">
+          <span id="top-word-right">Правильно</span>
+          <span class="score" id="right-score">0</span>
+        </div>
+        <div class="answ" id="wrongAnsw">
+          <span id="top-word-wrong">Неправильно</span> 
+          <span class="score" id="wrong-score">0</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="modal" class="modal">
+  <div class="modal-content" id="modal-content">
+    <p>Ваш рівень англійської: <span id="skill-level"></span></p>
+    <p>Ви — <span id="skill-word"></span></p>
+  </div>
+</div>
+
+<script src="jquery-3.7.1.min.js"></script>
+<script src="main.js"></script>
+<script>cardGame()</script>
+</body>
+</html>
